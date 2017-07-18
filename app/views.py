@@ -161,7 +161,7 @@ class TagView(ListView):
 #         obj.suggest = suggest_data
 #         obj.save()
 #
-#         send_mail('访客意见', suggest_data, 'tomming233@sina.com', ['tomming233@163.com'], fail_silently=False)
+#         send_mail('访客意见', suggest_data, 'jinyifei1020@sina.com', ['jinyifei1020@163.com'], fail_silently=False)
 #         return super(SuggestView, self).form_valid(form)
 #
 #     def get_context_data(self, **kwargs):
@@ -179,7 +179,7 @@ def suggest_view(request):
             new_record.save()
             try:
                 # 使用celery并发处理邮件发送的任务
-                celery_send_email.delay('访客意见', suggest_data, 'tomming233@sina.com', ['tomming233@163.com'])
+                celery_send_email.delay('访客意见', suggest_data, 'jinyifei1020@sina.com', ['jinyifei1020@163.com'])
             except Exception as e:
                 logger.error("邮件发送失败: {}".format(e))
             return redirect('app:thanks')
