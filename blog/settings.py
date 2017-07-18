@@ -180,8 +180,8 @@ BOOTSTRAP3 = {
 # email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = "smtp.sina.com"
-EMAIL_HOST_PASSWORD = 'hided'
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER = "tomming233@sina.com"
+EMAIL_HOST_PASSWORD = '****'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER = "jinyifei1020@sina.com"
 EMAIL_PORT = 25
 EMAIL_USE_TLS = True
 
